@@ -6,6 +6,7 @@ export interface ProductAttributes {
   name: string
   description: string
   price: string
+  image: string
   categoryId: number
 }
 
@@ -33,6 +34,9 @@ export const Product = sequelize.define<ProductInstance, ProductAttributes>('pro
   price: {
     allowNull: false,
     type: DataTypes.STRING
+  },
+  image: {
+    type: DataTypes.STRING,
   },
   categoryId: {
     allowNull: false,
